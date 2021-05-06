@@ -23,13 +23,11 @@ public class SecurityManager {
         AppUserAuth ret = new AppUserAuth();
         AppUser authUser = null;
 
-        authUser = repository.findByUserName(user.getUserName());
-
+        authUser = repository.findByUsername(user.getUsername());
 
         if(authUser != null) {
             ret = this.buildUserAuthObject(authUser);
         }
-
         return ret;
     }
 
@@ -56,7 +54,7 @@ public class SecurityManager {
         String randomUUIDString = uuid.toString();
 
         // Set las propiedades del usuario
-        ret.setUserName(authUser.getUserName());
+        ret.setUserName(authUser.getUsername());
         ret.setIsAuthenticated( true );
         ret.setBearerToken(randomUUIDString);
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
+@Table(name = "app_users")
 public class AppUser {
 
     @Id
@@ -14,7 +14,7 @@ public class AppUser {
     private Long userId;
 
     @Column(name = "user_name",length = 255)
-    private String userName;
+    private String username;
 
     @Column(name = "password",length = 255)
     private String password;
@@ -35,12 +35,12 @@ public class AppUser {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

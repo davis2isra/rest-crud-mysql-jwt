@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1")
 public class ProductController {
 
@@ -77,7 +77,6 @@ public class ProductController {
         response.put("deleted", Boolean.TRUE);
 
         return response;
-
     }
 
     @PostMapping("/login")
@@ -91,5 +90,6 @@ public class ProductController {
             return (ResponseEntity) ResponseEntity.status(HttpStatus.NOT_FOUND);
         }
     }
+
 
 }
